@@ -1,6 +1,6 @@
 // EDIT THESE: your contact details appear on all policy pages.
 export const SITE = {
-  name: "Demo Day",
+  name: "Startup Karna Hai",
   legalName: "Kunal Kumar",
   email: "kunalkumarbgs1262@gmail.com",
   phone: "+91 93415 17698",
