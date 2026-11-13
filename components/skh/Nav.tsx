@@ -6,7 +6,6 @@ const LINKS = [
   { key: "events", label: "SKH Events", href: "/events" },
   { key: "founder-caravan", label: "Founder Caravan", href: "/founder-caravan" },
   { key: "portfolio", label: "Portfolio", href: "/portfolio" },
-  { key: "about", label: "About", href: "/#about" },
   { key: "contact", label: "Contact", href: "/#contact" },
 ];
 

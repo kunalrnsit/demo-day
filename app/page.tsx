@@ -2,6 +2,7 @@ import Nav from "@/components/skh/Nav";
 import Footer, { SampleNotice } from "@/components/skh/Footer";
 import Contact from "@/components/skh/Contact";
 import PortfolioCard from "@/components/skh/PortfolioCard";
+import Team from "@/components/skh/Team";
 import { serif } from "@/lib/fonts";
 import { SKH, STATS, PROGRAMS, PORTFOLIO, NETWORK, INVESTING_STEPS, EVENTS, FAQS } from "@/lib/skh";
 
@@ -144,6 +145,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Team />
 
       {/* Portfolio preview */}
       <section className="mx-auto max-w-6xl px-5 py-24">

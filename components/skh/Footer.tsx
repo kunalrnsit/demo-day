@@ -24,6 +24,7 @@ export default function Footer() {
       title: "SKH",
       links: [
         ["About", "/#about"],
+        ["Team", "/#team"],
         ["Portfolio", "/portfolio"],
         ["Contact", "/#contact"],
       ],
