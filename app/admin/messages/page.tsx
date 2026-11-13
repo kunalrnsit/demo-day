@@ -113,7 +113,8 @@ export default function AdminMessagesPage() {
           <nav className="flex items-center gap-1 text-sm">
             <a href="/admin" className="rounded-md px-3 py-1.5 font-semibold text-black/60 hover:text-black">Applications</a>
             <a href="/admin/messages" className="rounded-md bg-black/5 px-3 py-1.5 font-semibold">Messages</a>
-            <a href="/" className="rounded-md px-3 py-1.5 font-semibold text-black/60 hover:text-black">View site</a>
+            <a href="/admin/investors" className="rounded-md px-3 py-1.5 font-semibold text-black/60 hover:text-black">Investors</a>
+            <a href="/" className="hidden rounded-md px-3 py-1.5 font-semibold text-black/60 hover:text-black sm:inline">View site</a>
           </nav>
         </div>
       </header>

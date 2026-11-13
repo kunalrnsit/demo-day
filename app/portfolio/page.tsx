@@ -1,6 +1,7 @@
 import Nav from "@/components/skh/Nav";
 import Footer, { SampleNotice } from "@/components/skh/Footer";
 import PortfolioCard from "@/components/skh/PortfolioCard";
+import InvestorForm from "@/components/skh/InvestorForm";
 import { serif } from "@/lib/fonts";
 import { SKH, PORTFOLIO, NETWORK, INVESTING_STEPS } from "@/lib/skh";
 
@@ -131,6 +132,37 @@ export default function PortfolioPage() {
         </ol>
       </section>
 
+      {/* Join as an investor */}
+      <section id="join" className="scroll-mt-20 border-y border-black/10 bg-[#f3efe6] py-24">
+        <div className="mx-auto grid max-w-6xl gap-12 px-5 md:grid-cols-[1fr_1.3fr]">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-600">For investors</p>
+            <h2 className={`${serif.className} mt-4 text-4xl leading-tight sm:text-5xl`}>Join the {SKH.short} investor network</h2>
+            <p className="mt-5 text-lg leading-8 text-black/65">
+              Meet founders we&apos;ve come to know through Demo Day, SKH Events and Founder Caravan, introduced
+              personally, matched to the sectors and cheque sizes you care about.
+            </p>
+            <ul className="mt-8 space-y-4">
+              {[
+                "Curated introductions, not a flood of decks",
+                "Early access to Demo Day finalists",
+                "Co-invest alongside IIT, IIM and ISB alumni",
+              ].map((item) => (
+                <li key={item} className="flex gap-3">
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange-600 text-white">
+                    <svg viewBox="0 0 16 16" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <path d="M3 8.5l3 3 7-7" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                  <span className="text-black/75">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <InvestorForm />
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="mx-auto grid max-w-6xl gap-5 px-5 pb-24 md:grid-cols-2">
         <div className="rounded-2xl bg-orange-600 p-9 text-white">
@@ -143,7 +175,7 @@ export default function PortfolioPage() {
         <div className="rounded-2xl bg-white p-9 ring-1 ring-black/5">
           <h3 className={`${serif.className} text-4xl`}>Investor?</h3>
           <p className="mt-3 text-black/60">Join the {SKH.short} network and meet founders through warm introductions.</p>
-          <a href="/#contact" className="mt-6 inline-block rounded-md bg-orange-600 px-5 py-3 font-semibold text-white hover:bg-orange-700">
+          <a href="#join" className="mt-6 inline-block rounded-md bg-orange-600 px-5 py-3 font-semibold text-white hover:bg-orange-700">
             Join the network →
           </a>
         </div>

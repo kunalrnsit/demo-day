@@ -209,6 +209,7 @@ export default function AdminPage() {
           </div>
           <div className="flex items-center gap-4 text-sm">
             <a href="/admin/messages" className="font-semibold text-black/70 hover:text-black">Messages</a>
+            <a href="/admin/investors" className="font-semibold text-black/70 hover:text-black">Investors</a>
             <a href="/" className="font-semibold text-black/70 hover:text-black">View site</a>
             <span className="hidden text-black/50 sm:inline">{adminEmail}</span>
             <button onClick={signOut} className="font-semibold text-black/70 hover:text-black">Sign out</button>
