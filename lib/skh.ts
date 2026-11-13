@@ -14,9 +14,9 @@ export const SKH = {
   short: "SKH",
   tagline: "From idea to investment, with the right people beside you.",
   city: "Bengaluru",
-  email: "hello@example.com", // ← replace
-  phone: "+91 00000 00000", // ← replace
-  whatsapp: "910000000000", // ← replace: country code + number, no spaces or +
+  email: "kunalkumarbgs1262@gmail.com", // ← replace
+  phone: "+91 9341517698", // ← replace
+  whatsapp: "+91 9341517698", // ← replace: country code + number, no spaces or +
   social: {
     instagram: "#", // ← paste full profile links
     linkedin: "#",

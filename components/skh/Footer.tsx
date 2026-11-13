@@ -1,4 +1,5 @@
 import { SKH, SAMPLE_DATA } from "@/lib/skh";
+import WhatsAppButton from "@/components/skh/WhatsAppButton";
 
 export function SampleNotice() {
   if (!SAMPLE_DATA) return null;
@@ -71,6 +72,7 @@ export default function Footer() {
       <div className="mx-auto mt-12 max-w-6xl border-t border-white/10 pt-6 text-xs">
         © 2026 {SKH.name} ({SKH.short}). All rights reserved.
       </div>
+      <WhatsAppButton />
     </footer>
   );
 }

@@ -84,7 +84,7 @@ function downloadCsv(rows: Application[]) {
       r2?.problem, r2?.solution, r2?.customer, r2?.progress, r2?.why_you,
     ].map(escape).join(",");
   });
-  const blob = new Blob(["\uFEFF" + [headers.join(","), ...lines].join("\n")], { type: "text/csv;charset=utf-8" });
+  const blob = new Blob(["﻿" + [headers.join(","), ...lines].join("\n")], { type: "text/csv;charset=utf-8" });
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
@@ -205,9 +205,10 @@ export default function AdminPage() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5">
           <div className="flex items-center gap-2.5">
             <span className="flex h-8 w-8 items-center justify-center rounded-md bg-orange-600 text-sm font-bold text-white">D</span>
-            <span className="font-semibold">Demo Day Admin</span>
+            <span className="font-semibold">SKH Admin · Applications</span>
           </div>
           <div className="flex items-center gap-4 text-sm">
+            <a href="/admin/messages" className="font-semibold text-black/70 hover:text-black">Messages</a>
             <a href="/" className="font-semibold text-black/70 hover:text-black">View site</a>
             <span className="hidden text-black/50 sm:inline">{adminEmail}</span>
             <button onClick={signOut} className="font-semibold text-black/70 hover:text-black">Sign out</button>
