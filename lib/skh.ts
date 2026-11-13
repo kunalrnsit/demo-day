@@ -7,7 +7,7 @@
    While it is true, the site shows a small "sample figures" notice.
 ================================================================== */
 
-export const SAMPLE_DATA = true;
+export const SAMPLE_DATA = false;
 
 export const SKH = {
   name: "Startup Karna Hai",
