@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { supabase } from "@/lib/supabase";
+import SimpleHeader from "@/components/skh/SimpleHeader";
 
 const QUESTIONS = [
   { key: "problem", label: "Problem", hint: "What problem are you solving, and for whom?" },
@@ -81,15 +82,7 @@ export default function Round2Page() {
 
   return (
     <main className="min-h-screen bg-[#faf8f3] text-[#1b1b1b] antialiased">
-      <header className="border-b border-black/5">
-        <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-          <a href="/" className="flex items-center gap-2.5">
-            <span className="flex h-8 w-8 items-center justify-center rounded-md bg-orange-600 text-sm font-bold text-white">D</span>
-            <span className="text-lg font-semibold tracking-tight">Demo Day</span>
-          </a>
-          <a href="/" className="text-sm font-semibold text-black/60 hover:text-black">← Back to home</a>
-        </nav>
-      </header>
+      <SimpleHeader />
 
       <div className="mx-auto max-w-2xl px-5 py-14 md:py-20">
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-600">Round 2 · Idea evaluation</p>

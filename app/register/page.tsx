@@ -4,6 +4,7 @@ import { useState } from "react";
 import Script from "next/script";
 import { Instrument_Serif } from "next/font/google";
 import { supabase } from "@/lib/supabase";
+import SimpleHeader from "@/components/skh/SimpleHeader";
 
 const serif = Instrument_Serif({ weight: "400", subsets: ["latin"] });
 
@@ -111,8 +112,8 @@ export default function RegisterPage() {
       amount: order.amount,
       currency: "INR",
       order_id: order.orderId,
-      name: "Demo Day",
-      description: `Application fee – ${applicant.applicationId}`,
+      name: "Startup Karna Hai",
+      description: `Demo Day application fee – ${applicant.applicationId}`,
       prefill: { name: applicant.name, email: applicant.email, contact: applicant.phone },
       theme: { color: "#ea580c" },
       handler: async (response: Record<string, string>) => {
@@ -145,19 +146,7 @@ export default function RegisterPage() {
     <main className="min-h-screen bg-[#faf8f3] text-[#1b1b1b] antialiased">
       <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="afterInteractive" />
 
-      <header className="border-b border-black/5">
-        <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-          <a href="/" className="flex items-center gap-2.5">
-            <span className="flex h-8 w-8 items-center justify-center rounded-md bg-orange-600 text-sm font-bold text-white">
-              D
-            </span>
-            <span className="text-lg font-semibold tracking-tight">Demo Day</span>
-          </a>
-          <a href="/" className="text-sm font-semibold text-black/60 hover:text-black">
-            ← Back to home
-          </a>
-        </nav>
-      </header>
+      <SimpleHeader />
 
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-14 md:grid-cols-[1fr_1.1fr] md:py-20">
         {/* Left: intro + progress */}
@@ -315,8 +304,8 @@ export default function RegisterPage() {
                 {paidId}
               </p>
               <p className="mt-4 text-sm text-black/50">Save this ID. Shortlisted founders are contacted for Round 2.</p>
-              <a href="/" className="mt-8 inline-block font-semibold text-orange-600 hover:text-orange-700">
-                ← Back to home
+              <a href="/demo-day" className="mt-8 inline-block font-semibold text-orange-600 hover:text-orange-700">
+                ← Back to Demo Day
               </a>
             </div>
           )}

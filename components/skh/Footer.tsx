@@ -35,7 +35,7 @@ export default function Footer() {
         ["Terms", "/terms"],
         ["Privacy", "/privacy"],
         ["Refund Policy", "/refund"],
-        ["Admin", "/admin"],
+        ["Contact details", "/contact"],
       ],
     },
   ];
