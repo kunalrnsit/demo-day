@@ -10,7 +10,7 @@ export const PROGRAMS = [
     href: "/sessions",
     tag: "Talks & workshops",
     text: "Founder talks, investor office hours and hands-on workshops with people who've done it.",
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80",
+    image: "/sessions/hyd-3-1.jpg",
   },
   {
     key: "demo-day",
@@ -34,7 +34,7 @@ export const PROGRAMS = [
     href: "/community",
     tag: "Founders · investors · mentors",
     text: "A network of founders, investors and IIT, IIM and ISB alumni who help each other build.",
-    image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1200&q=80",
+    image: "/community/moment-05.jpg",
   },
 ];
 

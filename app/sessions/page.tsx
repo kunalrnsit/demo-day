@@ -22,12 +22,14 @@ export default function SessionsPage() {
   const speakers = new Set(SESSIONS.flatMap((s) => s.speakers.map((sp) => `${sp.name}|${sp.role}`))).size;
   const cities = new Set(SESSIONS.map((s) => s.city)).size;
 
+  // Attendees and Speakers only appear once sessions have that data filled in
   const totals = [
     { value: String(SESSIONS.length), label: "Sessions" },
-    { value: attendees > 0 ? `${attendees}+` : "–", label: "Attendees" },
-    { value: String(speakers), label: "Speakers" },
+    attendees > 0 ? { value: `${attendees}+`, label: "Attendees" } : null,
+    speakers > 0 ? { value: String(speakers), label: "Speakers" } : null,
     { value: String(cities), label: cities === 1 ? "City" : "Cities" },
-  ];
+  ].filter((t): t is { value: string; label: string } => t !== null);
+  const totalCols = totals.length === 2 ? "grid-cols-2" : totals.length === 3 ? "grid-cols-3" : "grid-cols-2 md:grid-cols-4";
 
   return (
     <main className="min-h-screen bg-[#faf8f3] text-[#1b1b1b] antialiased">
@@ -46,7 +48,7 @@ export default function SessionsPage() {
       </section>
 
       <section className="border-y border-black/10 bg-white">
-        <div className="mx-auto grid max-w-6xl grid-cols-2 px-5 md:grid-cols-4 md:divide-x md:divide-black/10">
+        <div className={`mx-auto grid max-w-6xl px-5 divide-x divide-black/10 ${totalCols}`}>
           {totals.map((t) => (
             <div key={t.label} className="px-4 py-8 text-center">
               <p className={`${serif.className} text-5xl`}>{t.value}</p>

@@ -14,8 +14,8 @@ export const metadata = {
   description: SKH.tagline,
 };
 
-const HERO_IMAGE = "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1600&q=80";
-const ABOUT_IMAGE = "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1200&q=80";
+const HERO_IMAGE = "/sessions/hyd-4-2.jpg";
+const ABOUT_IMAGE = "/sessions/blr-1-2.jpg";
 
 function Arrow() {
   return (
@@ -68,7 +68,7 @@ export default function Home() {
 
         <div className="relative">
           <div className="overflow-hidden rounded-2xl bg-black/10 shadow-xl">
-            <img src={HERO_IMAGE} alt="Founder pitching to investors" className="aspect-[4/3] w-full object-cover" />
+            <img src={HERO_IMAGE} alt="The SKH community together" className="aspect-[4/3] w-full object-cover" />
           </div>
           <div className="absolute -bottom-6 -left-4 hidden w-60 rounded-xl border border-black/5 bg-white p-4 shadow-lg sm:block">
             <p className="text-xs font-semibold uppercase tracking-wider text-black/45">Our network</p>

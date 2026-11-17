@@ -32,6 +32,22 @@ export const COMMUNITY = {
     { title: "Fast track to Demo Day", text: "Active members get noticed early in the Demo Day selection." },
   ],
 
+  // Photo gallery on the Community page. Files live in public/community.
+  // ⚠️ Photos marked "PanIIT" are from PanIIT alumni summits (other organisers' events):
+  // confirm with the founder that SKH can show them, or delete those lines.
+  gallery: [
+    { src: "/community/moment-01.jpg", alt: "Community members at the PanIIT Andhra Pradesh Summit 2026" }, // PanIIT
+    { src: "/community/moment-03.jpg", alt: "SKH members over lunch" },
+    { src: "/community/moment-05.jpg", alt: "SKH members on a terrace in the evening" },
+    { src: "/community/moment-02.jpg", alt: "Community members on stage at the PanIIT Hyderabad summit" }, // PanIIT
+    { src: "/community/moment-07.jpg", alt: "SKH members meeting in a hotel lobby" },
+    { src: "/community/moment-08.jpg", alt: "SKH members catching up at a café" },
+    { src: "/community/moment-06.jpg", alt: "Community members at a summit expo" }, // PanIIT
+    { src: "/community/moment-09.jpg", alt: "SKH members at an office visit" },
+    { src: "/community/moment-04.jpg", alt: "Community members at the IIT alumni stall" }, // PanIIT
+    { src: "/community/moment-10.jpg", alt: "Community members at a summit" }, // PanIIT
+  ],
+
   guidelines: [
     "Give before you ask: help others the way you'd want to be helped.",
     "No spam or cold pitching inside member groups.",

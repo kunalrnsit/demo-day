@@ -9,7 +9,7 @@ export const metadata = {
   description: "Join the SKH Community: founders, investors, mentors and IIT, IIM and ISB alumni who help each other build.",
 };
 
-const HERO_IMAGE = "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1600&q=80";
+const HERO_IMAGE = "/community/moment-03.jpg";
 
 export default function CommunityPage() {
   const joinHref = COMMUNITY.joinLink || "/#contact";
@@ -66,6 +66,23 @@ export default function CommunityPage() {
           ))}
         </div>
       </section>
+
+      {/* Gallery */}
+      {COMMUNITY.gallery.length > 0 && (
+        <section className="mx-auto max-w-6xl px-5 pb-24">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <h2 className={`${serif.className} text-4xl leading-tight sm:text-5xl`}>Moments from the community</h2>
+            <a href="/sessions" className="font-semibold text-orange-700 hover:text-orange-800">See SKH Sessions →</a>
+          </div>
+          <div className="mt-10 columns-2 gap-4 md:columns-3 [&>*]:mb-4">
+            {COMMUNITY.gallery.map((g) => (
+              <a key={g.src} href={g.src} target="_blank" rel="noopener noreferrer" className="block break-inside-avoid overflow-hidden rounded-xl bg-black/10">
+                <img src={g.src} alt={g.alt} loading="lazy" className="w-full transition duration-500 hover:scale-105" />
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Alumni */}
       <section className="bg-[#1b1b1b] py-24 text-white">

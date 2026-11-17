@@ -9,7 +9,8 @@
      (if you add a registerLink). Change it to "past" after the session,
      then fill in the takeaways and outcomes.
 
-   ⚠️ The sessions below are SAMPLES. Replace them with real ones.
+   ⚠️ Photos and dates are real. Speakers, stats, takeaways and outcomes
+   are empty until the founder sends them (empty parts are hidden).
 ================================================================== */
 
 export type Speaker = {
@@ -23,6 +24,7 @@ export type Session = {
   slug: string; // short web name, lowercase with dashes, unique: "fundraising-101"
   title: string;
   date: string; // YYYY-MM-DD
+  dateLabel?: string; // optional text shown instead of the date, e.g. "Date to be confirmed"
   time?: string; // e.g. "5:00 PM – 8:00 PM"
   city: string; // or "Online"
   venue?: string;
@@ -30,6 +32,7 @@ export type Session = {
   format: string; // Panel, Workshop, Fireside chat, Meetup, Office hours...
   summary: string; // one or two lines
   photos: string[]; // first one is the cover
+  video?: string; // optional short clip, e.g. "/sessions/clip.mp4"
   speakers: Speaker[];
   stats: { value: string; label: string }[]; // e.g. { value: "120", label: "Attendees" }
   takeaways: string[]; // key lessons from the session
@@ -39,88 +42,76 @@ export type Session = {
 
 export const SESSIONS: Session[] = [
   {
-    slug: "sample-investor-office-hours",
-    title: "Sample: Investor Office Hours",
-    date: "2026-12-20",
-    time: "4:00 PM – 7:00 PM",
+    slug: "skh-session-1-bengaluru",
+    title: "SKH Session 1 · Bengaluru",
+    date: "2026-11-07",
     city: "Bengaluru",
-    venue: "Venue to be announced",
-    status: "upcoming",
-    format: "Office hours",
-    summary: "Replace with a short description: who it's for and what attendees will get.",
-    photos: ["https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1200&q=80"],
-    speakers: [
-      { name: "Speaker Name", role: "Angel investor", photo: "" },
-      { name: "Speaker Name", role: "Partner, VC fund", photo: "" },
-    ],
-    stats: [
-      { value: "40", label: "Seats" },
-      { value: "8", label: "Investors" },
-    ],
+    status: "past",
+    format: "Founders' dinner",
+    summary: "Our first session in Bengaluru: founders, investors and alumni from the SKH network around one long table.",
+    photos: ["/sessions/blr-1-1.jpg", "/sessions/blr-1-2.jpg"],
+    video: "/sessions/blr-1-clip.mp4",
+    speakers: [], // add: { name: "Full Name", role: "Partner, XYZ Ventures", photo: "" }
+    stats: [], // add: { value: "40", label: "Attendees" }
     takeaways: [],
     outcomes: [],
-    registerLink: "/#contact",
   },
   {
-    slug: "sample-fundraising-101",
-    title: "Sample: Fundraising 101 for First-time Founders",
-    date: "2026-11-08",
-    time: "5:00 PM – 8:00 PM",
-    city: "Bengaluru",
-    venue: "Sample venue, HSR Layout",
-    status: "past",
-    format: "Workshop",
-    summary: "Replace with a short description of the session.",
-    photos: [
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80",
-      "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1200&q=80",
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80",
-    ],
-    speakers: [
-      { name: "Speaker Name", role: "Founder, Sample Startup", photo: "" },
-      { name: "Speaker Name", role: "Investment banker", photo: "" },
-      { name: "Speaker Name", role: "IIM alumnus, angel investor", photo: "" },
-    ],
-    stats: [
-      { value: "150+", label: "Attendees" },
-      { value: "3", label: "Speakers" },
-      { value: "12", label: "Investor intros" },
-      { value: "4.8/5", label: "Rating" },
-    ],
-    takeaways: [
-      "Replace with a key lesson, e.g. raise when you have proof, not just a plan.",
-      "Replace with a key lesson, e.g. know your numbers before the first meeting.",
-      "Replace with a key lesson, e.g. warm intros convert far better than cold emails.",
-    ],
-    outcomes: [
-      "Replace with an outcome, e.g. 12 founders introduced to investors.",
-      "Replace with an outcome, e.g. 2 startups moved to term-sheet discussions.",
-    ],
-  },
-  {
-    slug: "sample-founders-evening",
-    title: "Sample: Founders' Evening",
-    date: "2026-10-11",
-    time: "6:00 PM – 9:00 PM",
-    city: "Bengaluru",
+    slug: "skh-session-4-hyderabad",
+    title: "SKH Session 4 · Hyderabad",
+    date: "2026-10-17",
+    city: "Hyderabad",
     status: "past",
     format: "Meetup",
-    summary: "Replace with a short description of the session.",
-    photos: [
-      "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=1200&q=80",
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80",
-    ],
-    speakers: [{ name: "Speaker Name", role: "Founder, Sample Startup", photo: "" }],
-    stats: [
-      { value: "90", label: "Attendees" },
-      { value: "25", label: "Startups" },
-      { value: "6", label: "Investors" },
-    ],
-    takeaways: [
-      "Replace with a key lesson from the session.",
-      "Replace with a key lesson from the session.",
-    ],
-    outcomes: ["Replace with an outcome, e.g. 5 founders shortlisted for Demo Day."],
+    summary: "The fourth SKH Session in Hyderabad, bringing founders and investors together on the terrace.",
+    photos: ["/sessions/hyd-4-1.jpg", "/sessions/hyd-4-2.jpg"],
+    speakers: [],
+    stats: [],
+    takeaways: [],
+    outcomes: [],
+  },
+  {
+    slug: "skh-session-3-hyderabad",
+    title: "SKH Session 3 · Hyderabad",
+    date: "2026-08-22",
+    city: "Hyderabad",
+    status: "past",
+    format: "Meetup",
+    summary: "The third SKH Session in Hyderabad: an evening of conversations between founders, investors and alumni.",
+    photos: ["/sessions/hyd-3-1.jpg", "/sessions/hyd-3-2.jpg"],
+    speakers: [],
+    stats: [],
+    takeaways: [],
+    outcomes: [],
+  },
+  {
+    slug: "skh-session-2-hyderabad",
+    title: "SKH Session 2 · Hyderabad",
+    date: "2026-06-01", // ⚠️ real date not known yet: replace, then delete the dateLabel line below
+    dateLabel: "Date to be confirmed",
+    city: "Hyderabad",
+    status: "past",
+    format: "Meetup",
+    summary: "The second SKH Session in Hyderabad, where founders and investors from the network met to share notes.",
+    photos: ["/sessions/hyd-2-1.jpg", "/sessions/hyd-2-2.jpg"],
+    speakers: [],
+    stats: [],
+    takeaways: [],
+    outcomes: [],
+  },
+  {
+    slug: "skh-session-1-hyderabad",
+    title: "SKH Session 1 · Hyderabad",
+    date: "2026-04-18",
+    city: "Hyderabad",
+    status: "past",
+    format: "Meetup",
+    summary: "Where SKH Sessions began: the first founders-and-investors meetup in Hyderabad.",
+    photos: ["/sessions/hyd-1-1.jpg", "/sessions/hyd-1-2.jpg"],
+    speakers: [],
+    stats: [],
+    takeaways: [],
+    outcomes: [],
   },
 ];
 
@@ -132,6 +123,10 @@ export function sortedSessions(): Session[] {
 
 export function isUpcoming(s: Session): boolean {
   return s.status === "upcoming";
+}
+
+export function sessionDateText(s: Session): string {
+  return s.dateLabel || formatSessionDate(s.date);
 }
 
 export function formatSessionDate(date: string): string {

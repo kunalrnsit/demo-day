@@ -1,5 +1,5 @@
 import { serif } from "@/lib/fonts";
-import { formatSessionDate, isUpcoming, type Session, type Speaker } from "@/lib/sessions";
+import { sessionDateText, isUpcoming, type Session, type Speaker } from "@/lib/sessions";
 
 function initials(name: string) {
   return name
@@ -65,14 +65,14 @@ export default function SessionCard({ session, compact = false }: { session: Ses
         </div>
         {session.photos.length > 1 && (
           <span className="absolute bottom-3 right-3 rounded-full bg-black/60 px-2.5 py-1 text-xs font-medium text-white backdrop-blur">
-            {session.photos.length} photos
+            {session.photos.length} photos{session.video ? " + video" : ""}
           </span>
         )}
       </a>
 
       <div className="flex flex-1 flex-col p-6">
         <p className="text-sm font-semibold text-orange-700">
-          {formatSessionDate(session.date)} · {session.city}
+          {sessionDateText(session)} · {session.city}
         </p>
         <h3 className={`${serif.className} mt-2 text-3xl leading-tight`}>
           <a href={`/sessions/${session.slug}`} className="hover:text-orange-700">{session.title}</a>

@@ -4,7 +4,7 @@ import Footer, { SampleNotice } from "@/components/skh/Footer";
 import { SpeakerAvatar } from "@/components/skh/SessionCard";
 import { serif } from "@/lib/fonts";
 import { SKH } from "@/lib/skh";
-import { SESSIONS, formatSessionDate, isUpcoming } from "@/lib/sessions";
+import { SESSIONS, sessionDateText, isUpcoming } from "@/lib/sessions";
 
 export function generateStaticParams() {
   return SESSIONS.map((s) => ({ slug: s.slug }));
@@ -45,7 +45,7 @@ export default async function SessionDetailPage({ params }: { params: Promise<{ 
             <p className="mt-5 text-lg leading-8 text-black/65">{s.summary}</p>
           </div>
           <dl className="grid gap-3 rounded-2xl bg-white p-6 text-sm ring-1 ring-black/5">
-            <div className="flex gap-4"><dt className="w-16 shrink-0 text-black/45">Date</dt><dd className="font-semibold">{formatSessionDate(s.date)}</dd></div>
+            <div className="flex gap-4"><dt className="w-16 shrink-0 text-black/45">Date</dt><dd className="font-semibold">{sessionDateText(s)}</dd></div>
             {s.time && <div className="flex gap-4"><dt className="w-16 shrink-0 text-black/45">Time</dt><dd className="font-semibold">{s.time}</dd></div>}
             <div className="flex gap-4"><dt className="w-16 shrink-0 text-black/45">Where</dt><dd className="font-semibold">{s.venue ? `${s.venue}, ${s.city}` : s.city}</dd></div>
             {upcoming && s.registerLink && (
@@ -140,10 +140,13 @@ export default async function SessionDetailPage({ params }: { params: Promise<{ 
       )}
 
       {/* Gallery */}
-      {gallery.length > 0 && (
+      {(gallery.length > 0 || s.video) && (
         <section className="mx-auto max-w-6xl px-5 pt-16">
-          <h2 className="text-2xl font-semibold">Photos</h2>
+          <h2 className="text-2xl font-semibold">Photos{s.video ? " & video" : ""}</h2>
           <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3">
+            {s.video && (
+              <video src={s.video} controls muted playsInline preload="metadata" className="aspect-[4/3] w-full rounded-xl bg-black object-contain" />
+            )}
             {gallery.map((src, i) => (
               <a key={i} href={src} target="_blank" rel="noopener noreferrer" className="overflow-hidden rounded-xl bg-black/10">
                 <img src={src} alt={`${s.title} photo ${i + 2}`} className="aspect-[4/3] w-full object-cover transition duration-500 hover:scale-105" />
