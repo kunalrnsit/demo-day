@@ -78,9 +78,9 @@ export default function FounderCaravanPage() {
       <section className="mx-auto grid max-w-6xl gap-5 px-5 pb-24 md:grid-cols-2">
         <div className="rounded-2xl bg-orange-600 p-9 text-white">
           <h3 className={`${serif.className} text-4xl`}>Founder in a Caravan city?</h3>
-          <p className="mt-3 text-white/85">Apply to Demo Day now and mention the Caravan stop near you.</p>
+          <p className="mt-3 text-white/85">Register for Demo Day now and mention the Caravan stop near you.</p>
           <a href="/demo-day" className="mt-6 inline-block rounded-md bg-[#1b1b1b] px-5 py-3 font-semibold hover:bg-black">
-            Apply to Demo Day →
+            Register for Demo Day →
           </a>
         </div>
         <div className="rounded-2xl bg-white p-9 ring-1 ring-black/5">

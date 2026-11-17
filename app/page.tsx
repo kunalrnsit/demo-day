@@ -4,7 +4,10 @@ import Contact from "@/components/skh/Contact";
 import PortfolioCard from "@/components/skh/PortfolioCard";
 import Team from "@/components/skh/Team";
 import { serif } from "@/lib/fonts";
-import { SKH, STATS, PROGRAMS, PORTFOLIO, NETWORK, INVESTING_STEPS, EVENTS, FAQS } from "@/lib/skh";
+import SessionCard from "@/components/skh/SessionCard";
+import { SKH, STATS, PORTFOLIO, NETWORK, INVESTING_STEPS } from "@/lib/skh";
+import { PROGRAMS, FAQS } from "@/lib/programs";
+import { sortedSessions } from "@/lib/sessions";
 
 export const metadata = {
   title: `${SKH.name} (${SKH.short}) | Build, pitch and raise`,
@@ -23,14 +26,14 @@ function Arrow() {
 }
 
 export default function Home() {
-  const upcoming = EVENTS.filter((e) => e.status === "upcoming").slice(0, 3);
+  const latestSessions = sortedSessions().slice(0, 2);
 
   return (
     <main className="min-h-screen bg-[#faf8f3] text-[#1b1b1b] antialiased">
       <SampleNotice />
       <div className="bg-[#1b1b1b] px-4 py-2.5 text-center text-sm text-white/90">
         <span className="mr-2 inline-block h-2 w-2 rounded-full bg-orange-500 align-middle" />
-        Demo Day 2027 applications are open.{" "}
+        Demo Day 2027 registrations are open.{" "}
         <a href="/demo-day" className="font-semibold text-orange-400 underline-offset-4 hover:underline">
           Learn more →
         </a>
@@ -55,7 +58,7 @@ export default function Home() {
               href="/demo-day"
               className="inline-flex items-center gap-2 rounded-md bg-orange-600 px-6 py-3.5 font-semibold text-white shadow-sm transition hover:bg-orange-700"
             >
-              Apply to Demo Day <Arrow />
+              Register for Demo Day <Arrow />
             </a>
             <a href="/portfolio" className="inline-flex items-center gap-2 px-2 py-3.5 font-semibold text-black/70 hover:text-black">
               See our portfolio
@@ -92,10 +95,10 @@ export default function Home() {
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-600">What we run</p>
-            <h2 className={`${serif.className} mt-4 text-4xl leading-tight sm:text-5xl`}>Three ways in to {SKH.short}</h2>
+            <h2 className={`${serif.className} mt-4 text-4xl leading-tight sm:text-5xl`}>Four ways in to {SKH.short}</h2>
           </div>
         </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {PROGRAMS.map((p) => (
             <a key={p.key} href={p.href} className="group overflow-hidden rounded-2xl bg-white ring-1 ring-black/5 transition hover:shadow-xl">
               <div className="overflow-hidden bg-black/5">
@@ -128,7 +131,7 @@ export default function Home() {
               where trust comes before term sheets.
             </p>
             <p className="mt-4 text-lg leading-8 text-white/70">
-              Through Demo Day, SKH Events and Founder Caravan, we find founders early, get to know them, and open the
+              Through SKH Sessions, Demo Day, Founder Caravan and the SKH Community, we find founders early, get to know them, and open the
               doors they need, from the first pitch to the next round.
             </p>
             <div className="mt-8 grid grid-cols-3 gap-4">
@@ -193,29 +196,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Upcoming events */}
+      {/* Latest sessions */}
       <section className="mx-auto max-w-6xl px-5 py-24">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-600">SKH Events</p>
-            <h2 className={`${serif.className} mt-4 text-4xl leading-tight sm:text-5xl`}>Coming up</h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-600">SKH Sessions</p>
+            <h2 className={`${serif.className} mt-4 text-4xl leading-tight sm:text-5xl`}>Latest sessions</h2>
           </div>
-          <a href="/events" className="inline-flex items-center gap-2 font-semibold text-orange-700 hover:text-orange-800">
-            All events <Arrow />
+          <a href="/sessions" className="inline-flex items-center gap-2 font-semibold text-orange-700 hover:text-orange-800">
+            All sessions <Arrow />
           </a>
         </div>
-        <div className="mt-10 divide-y divide-black/10 border-y border-black/10">
-          {upcoming.map((e) => (
-            <div key={e.title} className="flex flex-col gap-2 py-6 sm:flex-row sm:items-center sm:gap-8">
-              <p className="w-40 shrink-0 font-semibold text-orange-700">{e.date}</p>
-              <div className="flex-1">
-                <p className="text-lg font-semibold">{e.title}</p>
-                <p className="text-sm text-black/55">{e.kind} · {e.city}</p>
-              </div>
-              <a href={e.link ?? "/#contact"} className="text-sm font-semibold text-black/70 hover:text-black">
-                {e.link ? "Register →" : "Get notified →"}
-              </a>
-            </div>
+        <div className="mt-10 grid gap-6 lg:grid-cols-2">
+          {latestSessions.map((s) => (
+            <SessionCard key={s.slug} session={s} compact />
           ))}
         </div>
       </section>

@@ -120,7 +120,7 @@ export default function DemoDayPage() {
         <span className="mr-2 inline-block h-2 w-2 rounded-full bg-orange-500 align-middle" />
         Applications are open for {EVENT.name} 2027 by Startup Karna Hai.{" "}
         <a href="/register" className="font-semibold text-orange-400 underline-offset-4 hover:underline">
-          Apply now →
+          Register now →
         </a>
       </div>
 
@@ -144,7 +144,7 @@ export default function DemoDayPage() {
               href="/register"
               className="inline-flex items-center gap-2 rounded-md bg-orange-600 px-6 py-3.5 font-semibold text-white shadow-sm transition hover:bg-orange-700"
             >
-              Apply for {EVENT.name} <Arrow />
+              Register for {EVENT.name} <Arrow />
             </a>
             <a href="#how" className="inline-flex items-center gap-2 px-2 py-3.5 font-semibold text-black/70 hover:text-black">
               See how it works
@@ -309,13 +309,13 @@ export default function DemoDayPage() {
           Your idea deserves a stage.
         </h2>
         <p className="mx-auto mt-5 max-w-xl text-lg text-white/85">
-          Apply in 2 minutes. Get your Application ID instantly.
+          Register in 2 minutes. Get your Application ID instantly.
         </p>
         <a
           href="/register"
           className="mt-9 inline-flex items-center gap-2 rounded-md bg-[#1b1b1b] px-7 py-4 font-semibold text-white transition hover:bg-black"
         >
-          Apply now · {EVENT.fee} <Arrow />
+          Register now · {EVENT.fee} <Arrow />
         </a>
       </section>
 

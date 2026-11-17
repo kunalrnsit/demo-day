@@ -139,7 +139,7 @@ export default function PortfolioPage() {
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-600">For investors</p>
             <h2 className={`${serif.className} mt-4 text-4xl leading-tight sm:text-5xl`}>Join the {SKH.short} investor network</h2>
             <p className="mt-5 text-lg leading-8 text-black/65">
-              Meet founders we&apos;ve come to know through Demo Day, SKH Events and Founder Caravan, introduced
+              Meet founders we&apos;ve come to know through SKH Sessions, Demo Day and Founder Caravan, introduced
               personally, matched to the sectors and cheque sizes you care about.
             </p>
             <ul className="mt-8 space-y-4">
@@ -169,7 +169,7 @@ export default function PortfolioPage() {
           <h3 className={`${serif.className} text-4xl`}>Founder?</h3>
           <p className="mt-3 text-white/85">Start with Demo Day. The best founders get introduced to the network.</p>
           <a href="/demo-day" className="mt-6 inline-block rounded-md bg-[#1b1b1b] px-5 py-3 font-semibold hover:bg-black">
-            Apply to Demo Day →
+            Register for Demo Day →
           </a>
         </div>
         <div className="rounded-2xl bg-white p-9 ring-1 ring-black/5">

@@ -2,9 +2,10 @@ import { SKH } from "@/lib/skh";
 
 const LINKS = [
   { key: "home", label: "Home", href: "/" },
+  { key: "sessions", label: "SKH Sessions", href: "/sessions" },
   { key: "demo-day", label: "Demo Day", href: "/demo-day" },
-  { key: "events", label: "SKH Events", href: "/events" },
   { key: "founder-caravan", label: "Founder Caravan", href: "/founder-caravan" },
+  { key: "community", label: "Community", href: "/community" },
   { key: "portfolio", label: "Portfolio", href: "/portfolio" },
   { key: "contact", label: "Contact", href: "/#contact" },
 ];
@@ -48,7 +49,7 @@ export default function Nav({ active = "home" }: { active?: string }) {
             href="/register"
             className="hidden rounded-md bg-orange-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-orange-700 sm:inline-block"
           >
-            Apply
+            Register
           </a>
 
           {/* Mobile menu (works without JavaScript) */}
@@ -72,7 +73,7 @@ export default function Nav({ active = "home" }: { active?: string }) {
                 </a>
               ))}
               <a href="/register" className="mt-1 block rounded-lg bg-orange-600 px-3 py-2.5 text-center text-sm font-semibold text-white">
-                Apply to Demo Day
+                Register for Demo Day
               </a>
             </div>
           </details>
