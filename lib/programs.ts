@@ -23,7 +23,7 @@ export const PROGRAMS = [
   {
     key: "collab",
     title: "Collab",
-    href: "/#contact",
+    href: "/collab",
     tag: "Partner with SKH",
     text: "Brands, colleges, incubators and funds: co-host sessions, back Demo Day or build programs with SKH.",
     image: "/sessions/hyd-1-2.jpg",
