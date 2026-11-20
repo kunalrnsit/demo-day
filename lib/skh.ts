@@ -14,9 +14,9 @@ export const SKH = {
   short: "SKH",
   tagline: "From idea to investment, with the right people beside you.",
   city: "Bengaluru",
-  email: "kunalkumarbgs1262@gmail.com", // ← replace
-  phone: "+91 9341517698", // ← replace
-  whatsapp: "+91 9341517698", // ← replace: country code + number, no spaces or +
+  email: "hello@example.com", // ← replace
+  phone: "+91 80084 35970",
+  whatsapp: "918008435970", // country code + number, no spaces or +
   social: {
     instagram: "#", // ← paste full profile links
     linkedin: "#",
@@ -141,5 +141,5 @@ export const FAQS = [
   { q: "What is Startup Karna Hai?", a: "SKH is a founder community and investment network that helps early-stage founders build, pitch and raise, through Demo Day, SKH Events and Founder Caravan." },
   { q: "Does SKH invest directly?", a: "Investments come from our network of investors and alumni, who invest in founders they have come to know through SKH." },
   { q: "I'm an investor. How do I join the network?", a: "Write to us from the Contact section with a little about yourself and the kind of startups you back." },
-  { q: "How do I get started as a founder?", a: "Apply to Demo Day, or come to an SKH Event near you." },
+  { q: "How do I get started as a founder?", a: "Register for Demo Day, or come to an SKH Event near you." },
 ];
