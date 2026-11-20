@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Script from "next/script";
-import { Instrument_Serif } from "next/font/google";
+const Instrument_Serif = (_o: object) => ({ className: "font-serif" });
 import { supabase } from "@/lib/supabase";
 import SimpleHeader from "@/components/skh/SimpleHeader";
 
@@ -44,6 +44,7 @@ export default function RegisterPage() {
   const [step, setStep] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [ideaLength, setIdeaLength] = useState(0);
   const [applicant, setApplicant] = useState<Applicant | null>(null);
   const [paidId, setPaidId] = useState("");
 
@@ -201,9 +202,9 @@ export default function RegisterPage() {
                 <input id="phone" name="phone" type="tel" required minLength={10} maxLength={15} placeholder="10-digit mobile number" className={inputClass} />
               </div>
               <div>
-                <label htmlFor="idea" className="mb-1.5 block text-sm font-semibold">Your startup idea, in one line</label>
-                <input id="idea" name="idea" required maxLength={200} placeholder="e.g. UPI-based credit for kirana stores" className={inputClass} />
-                <p className="mt-1.5 text-xs text-black/45">Maximum 200 characters</p>
+                <label htmlFor="idea" className="mb-1.5 block text-sm font-semibold">Your startup idea, in one short paragraph</label>
+                <textarea id="idea" name="idea" required maxLength={100} rows={3} onChange={(e) => setIdeaLength(e.target.value.length)} placeholder="e.g. UPI-based credit for kirana stores, repaid from their daily sales." className={`${inputClass} resize-none`} />
+                <p className="mt-1.5 flex justify-between text-xs text-black/45"><span>Maximum 100 characters</span><span>{ideaLength}/100</span></p>
               </div>
 
               {error && <p className="rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700 ring-1 ring-red-200">{error}</p>}

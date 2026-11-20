@@ -17,8 +17,16 @@ export const PROGRAMS = [
     title: "Demo Day",
     href: "/demo-day",
     tag: "Registrations open",
-    text: "A 3-round pitch competition: 1,000 ideas, 300 deep dives, 30 founders on stage in front of investors.",
+    text: "A 3-round pitch competition: 1,000+ ideas, 300 deep dives, 30 founders on stage in front of investors.",
     image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=1200&q=80",
+  },
+  {
+    key: "collab",
+    title: "Collab",
+    href: "/#contact",
+    tag: "Partner with SKH",
+    text: "Brands, colleges, incubators and funds: co-host sessions, back Demo Day or build programs with SKH.",
+    image: "/sessions/hyd-1-2.jpg",
   },
   {
     key: "community",
@@ -32,8 +40,8 @@ export const PROGRAMS = [
 
 export const FAQS = [
   {
-    q: "What is Startup Karna Hai?",
-    a: "SKH is a founder community and investment network that helps early-stage founders build, pitch and raise, through SKH Sessions, Demo Day, Founder Caravan and the SKH Community.",
+    q: "What is Startup Karna Hai (SKH)?",
+    a: "SKH is a founder community and investment network that helps early-stage founders build, pitch and raise, through SKH Sessions, Demo Day, Founder Wheels and the SKH Community.",
   },
   {
     q: "Does SKH invest directly?",

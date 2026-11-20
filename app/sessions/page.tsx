@@ -75,10 +75,10 @@ export default function SessionsPage() {
         )}
       </section>
 
-      {/* Founder Caravan (part of SKH Sessions) */}
-      <section id="founder-caravan" className="scroll-mt-20 bg-[#1b1b1b] py-20 text-white">
+      {/* Founder Wheels (part of SKH Sessions) */}
+      <section id="founder-wheels" className="scroll-mt-20 bg-[#1b1b1b] py-20 text-white">
         <div className="mx-auto max-w-6xl px-5">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-400">Founder Caravan</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-400">Founder Wheels</p>
           <h2 className={`${serif.className} mt-4 max-w-3xl text-4xl leading-tight sm:text-5xl`}>
             SKH Sessions on the road, <em className="text-orange-400">coming to your city.</em>
           </h2>
@@ -109,7 +109,7 @@ export default function SessionsPage() {
           </div>
 
           <a href="/#contact" className="mt-10 inline-block rounded-md bg-orange-600 px-6 py-3.5 font-semibold text-white hover:bg-orange-700">
-            Bring the Caravan to your city →
+            Bring Founder Wheels to your city →
           </a>
         </div>
       </section>

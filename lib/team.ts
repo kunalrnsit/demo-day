@@ -1,8 +1,8 @@
 /* ==================================================================
    SKH TEAM: edit this file to change the Team section on the homepage.
 
-   Photos: put each photo in the "public/team" folder (square works best,
-   at least 400×400), then set photo to "/team/file-name.jpg".
+   Photos: put each photo in the "public/team" folder (square, at least
+   400×400; it is shown as a circle), then set photo to "/team/file-name.jpg".
    Leave photo as "" and the card shows the person's initials instead.
 ================================================================== */
 
@@ -17,40 +17,35 @@ export type TeamMember = {
 
 export const CORE_TEAM: TeamMember[] = [
   {
-    name: "Founder Name",
+    name: "Sanjeev", // ← add surname if he wants it shown
     role: "Founder",
-    bio: "Replace with 1–2 lines: background, what they've built, why they started SKH.",
-    alumni: "IIT",
-    photo: "",
+    bio: "Entrepreneur, Mentor, Investor",
+    photo: "/team/sanjeev.jpg",
     linkedin: "",
   },
   {
-    name: "Co-founder Name",
+    name: "Vibhor Garg",
     role: "Co-founder",
-    bio: "Replace with 1–2 lines about their experience and what they lead at SKH.",
-    alumni: "IIM",
-    photo: "",
+    bio: "IIT Alumni, Serial entrepreneur, Big\u00a04",
+    photo: "/team/vibhor-garg.jpg",
     linkedin: "",
   },
   {
-    name: "Team Member",
-    role: "Head of Investor Relations",
-    bio: "Replace with 1–2 lines about their role and background.",
-    photo: "",
+    name: "Akshat Chopra",
+    role: "Founding team member",
+    bio: "Startup Fundraising | Venture Ecosystem",
+    photo: "/team/akshat-chopra.jpg",
     linkedin: "",
   },
   {
-    name: "Team Member",
-    role: "Community & Events Lead",
-    bio: "Replace with 1–2 lines about their role and background.",
-    photo: "",
+    name: "Yuthika Dagar",
+    role: "Founding team member", // ← confirm her role
+    bio: "", // ← add a one-line description
+    photo: "/team/yuthika-dagar.jpg",
     linkedin: "",
   },
 ];
 
-export const ADVISORS: TeamMember[] = [
-  { name: "Advisor Name", role: "Angel investor", bio: "One line about the advisor.", alumni: "ISB", photo: "", linkedin: "" },
-  { name: "Advisor Name", role: "Investment banker", bio: "One line about the advisor.", photo: "", linkedin: "" },
-  { name: "Advisor Name", role: "Founder, scaled startup", bio: "One line about the advisor.", alumni: "IIT", photo: "", linkedin: "" },
-  { name: "Advisor Name", role: "VC partner", bio: "One line about the advisor.", alumni: "IIM", photo: "", linkedin: "" },
-];
+// Advisors & mentors: the section stays hidden while this list is empty.
+// To add one: { name: "Full Name", role: "Angel investor", bio: "", alumni: "ISB", photo: "", linkedin: "" },
+export const ADVISORS: TeamMember[] = [];

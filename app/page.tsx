@@ -95,10 +95,10 @@ export default function Home() {
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-600">What we run</p>
-            <h2 className={`${serif.className} mt-4 text-4xl leading-tight sm:text-5xl`}>Three ways in to {SKH.short}</h2>
+            <h2 className={`${serif.className} mt-4 text-4xl leading-tight sm:text-5xl`}>Four ways in to {SKH.short}</h2>
           </div>
         </div>
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {PROGRAMS.map((p) => (
             <a key={p.key} href={p.href} className="group overflow-hidden rounded-2xl bg-white ring-1 ring-black/5 transition hover:shadow-xl">
               <div className="overflow-hidden bg-black/5">
@@ -131,7 +131,7 @@ export default function Home() {
               where trust comes before term sheets.
             </p>
             <p className="mt-4 text-lg leading-8 text-white/70">
-              Through SKH Sessions, Demo Day, Founder Caravan and the SKH Community, we find founders early, get to know them, and open the
+              Through SKH Sessions, Demo Day, Founder Wheels and the SKH Community, we find founders early, get to know them, and open the
               doors they need, from the first pitch to the next round.
             </p>
             <div className="mt-8 grid grid-cols-3 gap-4">

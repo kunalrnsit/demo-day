@@ -15,8 +15,8 @@ export const SKH = {
   tagline: "From idea to investment, with the right people beside you.",
   city: "Bengaluru",
   email: "hello@example.com", // ← replace
-  phone: "+91 00000 00000", // ← replace
-  whatsapp: "910000000000", // ← replace: country code + number, no spaces or +
+  phone: "+91 80084 35970",
+  whatsapp: "918008435970", // country code + number, no spaces or +
   social: {
     instagram: "#", // ← paste full profile links
     linkedin: "#",
@@ -28,7 +28,7 @@ export const SKH = {
 export const STATS = [
   { value: "25+", label: "Startups supported" },
   { value: "60+", label: "Investors in our network" },
-  { value: "12", label: "Investment bankers" },
+  { value: "12+", label: "Investment bankers" },
   { value: "₹40 Cr+", label: "Capital facilitated" },
 ];
 
@@ -85,10 +85,10 @@ export const PORTFOLIO: PortfolioCompany[] = [
 /* ---------- Network ---------- */
 export const NETWORK = {
   investors: "60+",
-  investmentBankers: "12",
+  investmentBankers: "12+",
   startupsHelped: "25+",
   alumni: [
-    { school: "IIT", count: "150+", label: "IIT alumni" },
+    { school: "IIT", count: "500+", label: "IIT alumni" },
     { school: "IIM", count: "120+", label: "IIM alumni" },
     { school: "ISB", count: "80+", label: "ISB alumni" },
   ],
@@ -96,7 +96,7 @@ export const NETWORK = {
 
 /* ---------- Relationship-based investing ---------- */
 export const INVESTING_STEPS = [
-  { title: "Know the founder first", text: "We spend time with founders at events, Demo Day and the Caravan before any money is discussed." },
+  { title: "Know the founder first", text: "We spend time with founders at events, Demo Day and Founder Wheels before any money is discussed." },
   { title: "Warm introductions only", text: "Founders meet investors and bankers through someone who knows them both, not cold emails." },
   { title: "Back people, then plans", text: "Our network invests in founders it trusts, often alongside alumni who know the space." },
   { title: "Stay after the cheque", text: "Mentors and alumni keep helping with hiring, customers and the next round." },
@@ -120,10 +120,10 @@ export const EVENTS: SkhEvent[] = [
   { title: "Sample: SKH Meetup #1", date: "Oct 2026", city: "Bengaluru", kind: "Meetup", status: "past", text: "Replace with a short recap." },
 ];
 
-/* ---------- Founder Caravan ---------- */
+/* ---------- Founder Wheels (shown on the SKH Sessions page) ---------- */
 export const CARAVAN = {
   intro:
-    "Great founders are not only in Bengaluru, Delhi and Mumbai. Founder Caravan takes SKH on the road to meet founders in their own cities, and brings investors and mentors along.",
+    "Great founders are not only in Bengaluru, Delhi and Mumbai. Founder Wheels takes SKH on the road to meet founders in their own cities, and brings investors and mentors along.",
   stops: [
     { city: "Sample City 1", date: "Jan 2027", status: "Next stop" },
     { city: "Sample City 2", date: "Feb 2027", status: "Planned" },
@@ -138,7 +138,7 @@ export const CARAVAN = {
 
 /* ---------- FAQ (home) ---------- */
 export const FAQS = [
-  { q: "What is Startup Karna Hai?", a: "SKH is a founder community and investment network that helps early-stage founders build, pitch and raise, through Demo Day, SKH Events and Founder Caravan." },
+  { q: "What is Startup Karna Hai (SKH)?", a: "SKH is a founder community and investment network that helps early-stage founders build, pitch and raise, through Demo Day, SKH Events and Founder Caravan." },
   { q: "Does SKH invest directly?", a: "Investments come from our network of investors and alumni, who invest in founders they have come to know through SKH." },
   { q: "I'm an investor. How do I join the network?", a: "Write to us from the Contact section with a little about yourself and the kind of startups you back." },
   { q: "How do I get started as a founder?", a: "Register for Demo Day, or come to an SKH Event near you." },

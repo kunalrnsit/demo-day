@@ -21,7 +21,7 @@ function LinkedInIcon() {
 }
 
 function Avatar({ member, size }: { member: TeamMember; size: "lg" | "sm" }) {
-  const box = size === "lg" ? "aspect-square w-full rounded-2xl" : "h-14 w-14 rounded-full";
+  const box = size === "lg" ? "aspect-square w-full rounded-full" : "h-14 w-14 rounded-full";
   if (member.photo) {
     return <img src={member.photo} alt={member.name} className={`${box} bg-black/5 object-cover`} />;
   }
@@ -51,11 +51,11 @@ export default function Team() {
       {/* Core team */}
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {CORE_TEAM.map((m, i) => (
-          <article key={`${m.name}-${i}`} className="group">
-            <div className="overflow-hidden rounded-2xl">
+          <article key={`${m.name}-${i}`} className="group text-center">
+            <div className="mx-auto max-w-[240px] overflow-hidden rounded-full ring-4 ring-white shadow-md">
               <Avatar member={m} size="lg" />
             </div>
-            <div className="mt-4 flex items-start justify-between gap-3">
+            <div className="mt-5 flex items-start justify-center gap-3">
               <div>
                 <h3 className="text-lg font-semibold">{m.name}</h3>
                 <p className="text-sm font-medium text-orange-700">{m.role}</p>
@@ -77,7 +77,7 @@ export default function Team() {
                 {m.alumni} alumni
               </span>
             )}
-            <p className="mt-2 leading-6 text-black/60">{m.bio}</p>
+            {m.bio && <p className="mt-2 leading-6 text-black/60">{m.bio}</p>}
           </article>
         ))}
       </div>

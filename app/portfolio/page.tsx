@@ -139,7 +139,7 @@ export default function PortfolioPage() {
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-600">For investors</p>
             <h2 className={`${serif.className} mt-4 text-4xl leading-tight sm:text-5xl`}>Join the {SKH.short} investor network</h2>
             <p className="mt-5 text-lg leading-8 text-black/65">
-              Meet founders we&apos;ve come to know through SKH Sessions, Demo Day and Founder Caravan, introduced
+              Meet founders we&apos;ve come to know through SKH Sessions, Demo Day and Founder Wheels, introduced
               personally, matched to the sectors and cheque sizes you care about.
             </p>
             <ul className="mt-8 space-y-4">

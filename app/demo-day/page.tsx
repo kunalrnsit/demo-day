@@ -5,7 +5,7 @@ import { serif } from "@/lib/fonts";
 
 export const metadata = {
   title: "Demo Day 2027 | Startup Karna Hai",
-  description: "Pitch your startup idea: 1,000 ideas, 300 deep dives, 30 founders on stage.",
+  description: "Pitch your startup idea: 1,000+ ideas, 300 deep dives, 30 founders on stage.",
 };
 
 /* ------------------------------------------------------------------
@@ -33,7 +33,7 @@ const IMAGES = {
 
 const stats = [
   { value: "3", label: "Rounds to the stage" },
-  { value: "1,000", label: "Ideas in Round 1" },
+  { value: "1,000+", label: "Ideas in Round 1" },
   { value: "300", label: "Make it to Round 2" },
   { value: "30", label: "Pitch live on stage" },
 ];
@@ -42,9 +42,9 @@ const stages = [
   {
     step: "01",
     title: "Register",
-    text: "Tell us who you are and the problem you're solving, in one line. Pay the application fee and get your Application ID instantly.",
+    text: "Tell us who you are and the problem you're solving, in one short paragraph (max 100 characters). Pay the application fee and get your Application ID instantly.",
     image: IMAGES.laptop,
-    tag: "1,000 applicants",
+    tag: "1,000+ applicants",
   },
   {
     step: "02",
@@ -137,7 +137,7 @@ export default function DemoDayPage() {
             Pitch your idea to the people who can <em className="text-orange-600">make it real.</em>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-8 text-black/65">
-            1,000 ideas. 300 deep dives. 30 founders on stage. {EVENT.name} is where early-stage founders get
+            1,000+ ideas. 300 deep dives. 30 founders on stage. {EVENT.name} is where early-stage founders get
             seen, get feedback, and get their first real shot.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
@@ -207,7 +207,7 @@ export default function DemoDayPage() {
         <div className="mx-auto max-w-6xl px-5">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-400">How it works</p>
           <h2 className={`${serif.className} mt-4 max-w-2xl text-4xl leading-tight sm:text-5xl`}>
-            Three rounds. From 1,000 ideas to 30 founders on stage.
+            Three rounds. From 1,000+ ideas to 30 founders on stage.
           </h2>
 
           <div className="mt-14 grid gap-6 md:grid-cols-3">
