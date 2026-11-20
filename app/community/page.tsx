@@ -42,6 +42,7 @@ export default function CommunityPage() {
       </section>
 
       {/* Stats */}
+      {COMMUNITY.stats.length > 0 && (
       <section className="border-y border-black/10 bg-white">
         <div className="mx-auto grid max-w-6xl grid-cols-2 px-5 md:grid-cols-4 md:divide-x md:divide-black/10">
           {COMMUNITY.stats.map((s) => (
@@ -52,6 +53,7 @@ export default function CommunityPage() {
           ))}
         </div>
       </section>
+      )}
 
       {/* Who's in it */}
       <section className="mx-auto max-w-6xl px-5 py-24">

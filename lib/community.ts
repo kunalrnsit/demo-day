@@ -1,6 +1,6 @@
 /* ==================================================================
    SKH COMMUNITY page content. Edit freely.
-   ⚠️ Numbers and links below are SAMPLES. Replace them with real ones.
+   Only real numbers here. The stats strip is hidden while the list is empty.
 ================================================================== */
 
 export const COMMUNITY = {
@@ -12,10 +12,10 @@ export const COMMUNITY = {
     "The SKH Community brings together founders, investors, operators and IIT, IIM and ISB alumni who help each other build, through honest advice, warm introductions and showing up for each other.",
 
   stats: [
-    { value: "1,000+", label: "Members" },
-    { value: "15+", label: "Cities" },
-    { value: "300+", label: "Founders" },
-    { value: "60+", label: "Investors & mentors" },
+    { value: "10+", label: "SKH Sessions" },
+    { value: "10+", label: "Geography" },
+    { value: "12+", label: "Investment bankers" },
+    { value: "500+", label: "IIT alumni" },
   ],
 
   who: [

@@ -3,7 +3,7 @@ import Footer, { SampleNotice } from "@/components/skh/Footer";
 import PortfolioCard from "@/components/skh/PortfolioCard";
 import InvestorForm from "@/components/skh/InvestorForm";
 import { serif } from "@/lib/fonts";
-import { SKH, PORTFOLIO, NETWORK, INVESTING_STEPS } from "@/lib/skh";
+import { SKH, STATS, PORTFOLIO, NETWORK, INVESTING_STEPS } from "@/lib/skh";
 
 export const metadata = {
   title: `Portfolio | ${SKH.name}`,
@@ -14,13 +14,15 @@ export default function PortfolioPage() {
   const invested = PORTFOLIO.filter((c) => c.status === "Invested");
   const raising = PORTFOLIO.filter((c) => c.status === "Raising");
 
+  // Real numbers only: anything empty or zero is left out
   const numbers = [
-    { value: String(invested.length), label: "Startups invested in" },
-    { value: String(raising.length), label: "Startups raising with SKH" },
+    { value: invested.length ? String(invested.length) : "", label: "Startups invested in" },
+    { value: raising.length ? String(raising.length) : "", label: "Startups raising with SKH" },
     { value: NETWORK.investors, label: "Investors in the network" },
-    { value: NETWORK.investmentBankers, label: "Investment bankers" },
     { value: NETWORK.startupsHelped, label: "Startups helped so far" },
-  ];
+    ...STATS,
+  ].filter((n) => n.value).slice(0, 5);
+  const numberCols = numbers.length >= 5 ? "lg:grid-cols-5" : numbers.length === 4 ? "lg:grid-cols-4" : "lg:grid-cols-3";
 
   return (
     <main className="min-h-screen bg-[#faf8f3] text-[#1b1b1b] antialiased">
@@ -41,7 +43,7 @@ export default function PortfolioPage() {
 
       {/* Numbers */}
       <section className="border-y border-black/10 bg-white">
-        <div className="mx-auto grid max-w-6xl grid-cols-2 px-5 sm:grid-cols-3 lg:grid-cols-5 lg:divide-x lg:divide-black/10">
+        <div className={`mx-auto grid max-w-6xl grid-cols-2 px-5 sm:grid-cols-3 lg:divide-x lg:divide-black/10 ${numberCols}`}>
           {numbers.map((n) => (
             <div key={n.label} className="px-4 py-8 text-center">
               <p className={`${serif.className} text-5xl`}>{n.value}</p>
@@ -51,30 +53,51 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* Invested */}
+      {/* Startups (each list is hidden while empty) */}
       <section className="mx-auto max-w-6xl px-5 py-20">
-        <div className="flex items-center gap-3">
-          <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
-          <h2 className="text-2xl font-semibold">Invested by the {SKH.short} network</h2>
-          <span className="rounded-full bg-black/5 px-2.5 py-0.5 text-sm text-black/60">{invested.length}</span>
-        </div>
-        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {invested.map((c) => (
-            <PortfolioCard key={c.name} company={c} />
-          ))}
-        </div>
+        {PORTFOLIO.length === 0 && (
+          <div className="rounded-2xl bg-white p-10 text-center ring-1 ring-black/5">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-600">Coming soon</p>
+            <h2 className={`${serif.className} mt-3 text-4xl`}>Our portfolio is being added.</h2>
+            <p className="mx-auto mt-3 max-w-xl leading-7 text-black/60">
+              We&apos;re adding the startups our network has backed and the founders we&apos;re helping raise. Want to be one of them?
+            </p>
+            <a href="/demo-day" className="mt-6 inline-block rounded-md bg-orange-600 px-6 py-3 font-semibold text-white hover:bg-orange-700">
+              Register for Demo Day →
+            </a>
+          </div>
+        )}
 
-        <div className="mt-16 flex items-center gap-3">
-          <span className="h-2.5 w-2.5 rounded-full bg-blue-500" />
-          <h2 className="text-2xl font-semibold">Raising with {SKH.short}</h2>
-          <span className="rounded-full bg-black/5 px-2.5 py-0.5 text-sm text-black/60">{raising.length}</span>
-        </div>
-        <p className="mt-2 text-black/55">Founders we are introducing to investors in our network right now.</p>
-        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {raising.map((c) => (
-            <PortfolioCard key={c.name} company={c} />
-          ))}
-        </div>
+        {invested.length > 0 && (
+          <>
+            <div className="flex items-center gap-3">
+              <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
+              <h2 className="text-2xl font-semibold">Invested by the {SKH.short} network</h2>
+              <span className="rounded-full bg-black/5 px-2.5 py-0.5 text-sm text-black/60">{invested.length}</span>
+            </div>
+            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {invested.map((c) => (
+                <PortfolioCard key={c.name} company={c} />
+              ))}
+            </div>
+          </>
+        )}
+
+        {raising.length > 0 && (
+          <>
+            <div className={`${invested.length > 0 ? "mt-16" : ""} flex items-center gap-3`}>
+              <span className="h-2.5 w-2.5 rounded-full bg-blue-500" />
+              <h2 className="text-2xl font-semibold">Raising with {SKH.short}</h2>
+              <span className="rounded-full bg-black/5 px-2.5 py-0.5 text-sm text-black/60">{raising.length}</span>
+            </div>
+            <p className="mt-2 text-black/55">Founders we are introducing to investors in our network right now.</p>
+            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {raising.map((c) => (
+                <PortfolioCard key={c.name} company={c} />
+              ))}
+            </div>
+          </>
+        )}
       </section>
 
       {/* Network */}
@@ -85,12 +108,14 @@ export default function PortfolioPage() {
             Investors, bankers and an alumni network from India&apos;s top institutes.
           </h2>
 
-          <div className="mt-12 grid gap-5 md:grid-cols-2">
+          <div className={`mt-12 grid gap-5 ${NETWORK.investors ? "md:grid-cols-2" : ""}`}>
+            {NETWORK.investors && (
             <div className="rounded-2xl bg-white/5 p-7 ring-1 ring-white/10">
               <p className={`${serif.className} text-6xl`}>{NETWORK.investors}</p>
               <p className="mt-2 text-lg font-semibold">Investors</p>
               <p className="mt-2 leading-7 text-white/60">Angels, family offices and fund partners who meet founders through {SKH.short}.</p>
             </div>
+            )}
             <div className="rounded-2xl bg-white/5 p-7 ring-1 ring-white/10">
               <p className={`${serif.className} text-6xl`}>{NETWORK.investmentBankers}</p>
               <p className="mt-2 text-lg font-semibold">Investment bankers</p>

@@ -83,6 +83,7 @@ export default function SessionsPage() {
           </h2>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-white/70">{CARAVAN.intro}</p>
 
+          {CARAVAN.stops.length > 0 && (
           <ol className="mt-10 grid gap-5 md:grid-cols-3">
             {CARAVAN.stops.map((stop, i) => (
               <li key={stop.city} className="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
@@ -97,6 +98,7 @@ export default function SessionsPage() {
               </li>
             ))}
           </ol>
+          )}
 
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {CARAVAN.whatHappens.map((item, i) => (

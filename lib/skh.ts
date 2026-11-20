@@ -2,12 +2,12 @@
    STARTUP KARNA HAI: ALL SITE CONTENT LIVES IN THIS ONE FILE.
    Change the text, numbers and lists below and every page updates.
 
-   ⚠️ The numbers, startups and events below are SAMPLES.
-   Replace them with your real data, then set SAMPLE_DATA to false.
-   While it is true, the site shows a small "sample figures" notice.
+   Only real, confirmed numbers go here. Anything left empty ("" or [])
+   is hidden on the site automatically, and appears once you fill it in.
+   SAMPLE_DATA = true shows a yellow "samples" notice on every page.
 ================================================================== */
 
-export const SAMPLE_DATA = true;
+export const SAMPLE_DATA = false;
 
 export const SKH = {
   name: "Startup Karna Hai",
@@ -26,10 +26,10 @@ export const SKH = {
 
 /* ---------- Headline numbers (home + portfolio) ---------- */
 export const STATS = [
-  { value: "25+", label: "Startups supported" },
-  { value: "60+", label: "Investors in our network" },
+  { value: "10+", label: "SKH Sessions" },
+  { value: "10+", label: "Geography" },
   { value: "12+", label: "Investment bankers" },
-  { value: "₹40 Cr+", label: "Capital facilitated" },
+  { value: "500+", label: "IIT alumni" },
 ];
 
 /* ---------- Programs (cards on home + nav tabs) ---------- */
@@ -73,20 +73,15 @@ export type PortfolioCompany = {
   website?: string;
 };
 
-export const PORTFOLIO: PortfolioCompany[] = [
-  { name: "Sample Startup 1", sector: "Fintech", stage: "Seed", status: "Invested", oneLiner: "Replace with what the startup does, in one line.", founderAlumni: "IIT" },
-  { name: "Sample Startup 2", sector: "D2C", stage: "Pre-seed", status: "Invested", oneLiner: "Replace with what the startup does, in one line.", founderAlumni: "IIM" },
-  { name: "Sample Startup 3", sector: "Climate", stage: "Seed", status: "Raising", oneLiner: "Replace with what the startup does, in one line.", founderAlumni: "ISB" },
-  { name: "Sample Startup 4", sector: "Edtech", stage: "Pre-seed", status: "Raising", oneLiner: "Replace with what the startup does, in one line." },
-  { name: "Sample Startup 5", sector: "SaaS", stage: "Series A", status: "Invested", oneLiner: "Replace with what the startup does, in one line.", founderAlumni: "IIT" },
-  { name: "Sample Startup 6", sector: "Healthtech", stage: "Seed", status: "Raising", oneLiner: "Replace with what the startup does, in one line." },
-];
+// Add real startups here, e.g.:
+// { name: "Startup name", sector: "Fintech", stage: "Seed", status: "Invested", oneLiner: "What they do, in one line.", founderAlumni: "IIT Delhi", website: "https://..." },
+export const PORTFOLIO: PortfolioCompany[] = [];
 
 /* ---------- Network ---------- */
 export const NETWORK = {
-  investors: "60+",
+  investors: "", // number of investors, e.g. "100+" (hidden while empty)
   investmentBankers: "12+",
-  startupsHelped: "25+",
+  startupsHelped: "", // e.g. "100+" (hidden while empty)
   alumni: [
     { school: "IIT", count: "500+", label: "IIT alumni" },
     { school: "IIM", count: "120+", label: "IIM alumni" },
@@ -113,22 +108,14 @@ export type SkhEvent = {
   link?: string; // registration link, if any
 };
 
-export const EVENTS: SkhEvent[] = [
-  { title: "Sample: Founders' Evening", date: "Sat, 6 Dec 2026", city: "Bengaluru", kind: "Meetup", status: "upcoming", text: "Replace with your event description." },
-  { title: "Sample: Investor Office Hours", date: "Sat, 20 Dec 2026", city: "Bengaluru", kind: "Office hours", status: "upcoming", text: "Replace with your event description." },
-  { title: "Sample: Fundraising 101 Workshop", date: "Sat, 10 Jan 2027", city: "Online", kind: "Workshop", status: "upcoming", text: "Replace with your event description." },
-  { title: "Sample: SKH Meetup #1", date: "Oct 2026", city: "Bengaluru", kind: "Meetup", status: "past", text: "Replace with a short recap." },
-];
+export const EVENTS: SkhEvent[] = []; // not used: sessions live in lib/sessions.ts
 
 /* ---------- Founder Wheels (shown on the SKH Sessions page) ---------- */
 export const CARAVAN = {
   intro:
     "Great founders are not only in Bengaluru, Delhi and Mumbai. Founder Wheels takes SKH on the road to meet founders in their own cities, and brings investors and mentors along.",
-  stops: [
-    { city: "Sample City 1", date: "Jan 2027", status: "Next stop" },
-    { city: "Sample City 2", date: "Feb 2027", status: "Planned" },
-    { city: "Sample City 3", date: "Mar 2027", status: "Planned" },
-  ],
+  // Upcoming stops, e.g. { city: "Pune", date: "Jan 2027", status: "Next stop" }. Hidden while empty.
+  stops: [] as { city: string; date: string; status: string }[],
   whatHappens: [
     "Open pitch sessions for local founders",
     "1:1 office hours with investors and alumni mentors",

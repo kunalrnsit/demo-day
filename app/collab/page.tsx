@@ -43,7 +43,7 @@ export default function CollabPage() {
             Build the startup ecosystem <em className="text-orange-600">with us.</em>
           </h1>
           <p className="mt-6 text-lg leading-8 text-black/65">
-            Partner with {SKH.short} to reach founders early, alongside {NETWORK.investors} investors and IIT, IIM and ISB alumni.
+            Partner with {SKH.short} to reach founders early, alongside investors, {NETWORK.investmentBankers} investment bankers and IIT, IIM and ISB alumni.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <a href="/#contact" className="rounded-md bg-orange-600 px-6 py-3.5 font-semibold text-white hover:bg-orange-700">

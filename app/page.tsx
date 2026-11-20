@@ -72,8 +72,8 @@ export default function Home() {
           </div>
           <div className="absolute -bottom-6 -left-4 hidden w-60 rounded-xl border border-black/5 bg-white p-4 shadow-lg sm:block">
             <p className="text-xs font-semibold uppercase tracking-wider text-black/45">Our network</p>
-            <p className={`${serif.className} mt-1 text-4xl`}>{NETWORK.investors}</p>
-            <p className="text-sm text-black/60">investors backing founders through {SKH.short}</p>
+            <p className={`${serif.className} mt-1 text-4xl`}>{NETWORK.alumni[0].count}</p>
+            <p className="text-sm text-black/60">IIT alumni in the {SKH.short} network</p>
           </div>
         </div>
       </section>
@@ -151,7 +151,8 @@ export default function Home() {
 
       <Team />
 
-      {/* Portfolio preview */}
+      {/* Portfolio preview (hidden until real startups are added) */}
+      {PORTFOLIO.length > 0 && (
       <section className="mx-auto max-w-6xl px-5 py-24">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-2xl">
@@ -170,6 +171,7 @@ export default function Home() {
           ))}
         </div>
       </section>
+      )}
 
       {/* Relationship-based investing */}
       <section className="border-y border-black/10 bg-white py-24">
@@ -180,8 +182,8 @@ export default function Home() {
               Relationship-based investing
             </h2>
             <p className="mt-5 text-lg leading-8 text-black/65">
-              Our network has {NETWORK.investors} investors and {NETWORK.investmentBankers} investment bankers. They
-              back founders they&apos;ve come to know, not pitch decks from strangers.
+              Our network of investors, {NETWORK.investmentBankers} investment bankers and IIT, IIM and ISB alumni backs
+              founders they&apos;ve come to know, not pitch decks from strangers.
             </p>
           </div>
           <ol className="mt-14 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
