@@ -21,14 +21,13 @@ export default function SessionsPage() {
     return sum + (Number.isNaN(n) ? 0 : n);
   }, 0);
   const speakers = new Set(SESSIONS.flatMap((s) => s.speakers.map((sp) => `${sp.name}|${sp.role}`))).size;
-  const cities = new Set(SESSIONS.map((s) => s.city)).size;
 
-  // Attendees and Speakers only appear once sessions have that data filled in
+  // Headline numbers. Attendees and Speakers appear once sessions have that data filled in.
   const totals = [
-    { value: `${SESSIONS.length}+`, label: "Sessions" },
+    { value: "10+", label: "Sessions" },
     attendees > 0 ? { value: `${attendees}+`, label: "Attendees" } : null,
     speakers > 0 ? { value: String(speakers), label: "Speakers" } : null,
-    { value: String(cities), label: cities === 1 ? "City" : "Cities" },
+    { value: "10+", label: "Geography" },
   ].filter((t): t is { value: string; label: string } => t !== null);
   const totalCols = totals.length === 2 ? "grid-cols-2" : totals.length === 3 ? "grid-cols-3" : "grid-cols-2 md:grid-cols-4";
 

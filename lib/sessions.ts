@@ -87,8 +87,8 @@ export const SESSIONS: Session[] = [
   {
     slug: "skh-session-2-hyderabad",
     title: "SKH Session 2 · Hyderabad",
-    date: "2026-06-01", // ⚠️ real date not known yet: replace, then delete the dateLabel line below
-    dateLabel: "Date to be confirmed",
+    date: "2026-06-01", // used only for sorting; the card shows "June 2026"
+    dateLabel: "June 2026",
     city: "Hyderabad",
     status: "past",
     format: "Meetup",
