@@ -17,7 +17,6 @@ export default function Footer() {
       links: [
         ["SKH Sessions", "/sessions"],
         ["Demo Day", "/demo-day"],
-        ["Founder Caravan", "/founder-caravan"],
         ["Community", "/community"],
       ],
     },

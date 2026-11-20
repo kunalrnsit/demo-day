@@ -102,9 +102,9 @@ export default function ContactForm() {
       </div>
       <div className="mt-4">
         <label htmlFor="c-phone" className="mb-1.5 block text-sm font-semibold">
-          Phone / WhatsApp <span className="font-normal text-black/45">(optional)</span>
+          Phone / WhatsApp
         </label>
-        <input id="c-phone" name="phone" type="tel" maxLength={20} placeholder="10-digit mobile number" className={inputClass} />
+        <input id="c-phone" name="phone" type="tel" required minLength={10} maxLength={20} pattern="[0-9+ ]{10,20}" title="Enter a valid phone number" placeholder="10-digit mobile number" className={inputClass} />
       </div>
       <div className="mt-4">
         <label htmlFor="c-message" className="mb-1.5 block text-sm font-semibold">Message</label>

@@ -21,14 +21,6 @@ export const PROGRAMS = [
     image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=1200&q=80",
   },
   {
-    key: "founder-caravan",
-    title: "Founder Caravan",
-    href: "/founder-caravan",
-    tag: "On the road",
-    text: "SKH travels city to city to find founders beyond the usual metros and bring investors to them.",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80",
-  },
-  {
     key: "community",
     title: "Community",
     href: "/community",

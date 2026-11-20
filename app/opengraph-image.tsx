@@ -54,7 +54,7 @@ export default function OpengraphImage() {
         </div>
 
         <div style={{ display: "flex", gap: 16, fontSize: 26, fontWeight: 600 }}>
-          {["Demo Day", "SKH Events", "Founder Caravan", "Portfolio"].map((t) => (
+          {["SKH Sessions", "Demo Day", "Community", "Portfolio"].map((t) => (
             <div key={t} style={{ display: "flex", padding: "10px 22px", borderRadius: 999, background: "#fff", border: "2px solid #e8e2d6" }}>
               {t}
             </div>

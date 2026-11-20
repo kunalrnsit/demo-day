@@ -8,7 +8,7 @@ export const metadata = {
 
 const LINKS = [
   { title: "Home", text: "Start from the beginning", href: "/" },
-  { title: "Demo Day", text: "Apply and pitch your startup", href: "/demo-day" },
+  { title: "Demo Day", text: "Register and pitch your startup", href: "/demo-day" },
   { title: "Portfolio", text: "Startups we back", href: "/portfolio" },
   { title: "Contact", text: "Talk to the SKH team", href: "/#contact" },
 ];

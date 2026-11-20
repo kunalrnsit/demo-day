@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Apply to Demo Day | Startup Karna Hai",
+  title: "Register for Demo Day | Startup Karna Hai",
   description: "Register your startup for SKH Demo Day 2027.",
 };
 

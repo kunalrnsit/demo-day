@@ -47,11 +47,11 @@ export default function Home() {
             {SKH.name} · {SKH.short}
           </p>
           <h1 className={`${serif.className} mt-5 text-5xl leading-[1.05] sm:text-6xl lg:text-7xl`}>
-            Startup karna hai? <em className="text-orange-600">Chalo, karte hain.</em>
+            Startup karna hai? <em className="text-orange-600">Startup of startups.</em>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-8 text-black/65">
-            {SKH.short} helps early-stage founders build, pitch and raise, with a network of investors, investment
-            bankers and IIT, IIM and ISB alumni who back people they know.
+            {/* Keep this under 100 characters */}
+            Helping early-stage founders build, pitch and raise with investors and IIT, IIM, ISB alumni.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
@@ -95,10 +95,10 @@ export default function Home() {
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-600">What we run</p>
-            <h2 className={`${serif.className} mt-4 text-4xl leading-tight sm:text-5xl`}>Four ways in to {SKH.short}</h2>
+            <h2 className={`${serif.className} mt-4 text-4xl leading-tight sm:text-5xl`}>Three ways in to {SKH.short}</h2>
           </div>
         </div>
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {PROGRAMS.map((p) => (
             <a key={p.key} href={p.href} className="group overflow-hidden rounded-2xl bg-white ring-1 ring-black/5 transition hover:shadow-xl">
               <div className="overflow-hidden bg-black/5">

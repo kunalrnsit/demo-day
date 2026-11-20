@@ -1,3 +1,4 @@
+import { SKH } from "@/lib/skh";
 import Nav from "@/components/skh/Nav";
 import Footer from "@/components/skh/Footer";
 import { serif } from "@/lib/fonts";
@@ -40,7 +41,7 @@ const stats = [
 const stages = [
   {
     step: "01",
-    title: "Apply",
+    title: "Register",
     text: "Tell us who you are and the problem you're solving, in one line. Pay the application fee and get your Application ID instantly.",
     image: IMAGES.laptop,
     tag: "1,000 applicants",
@@ -79,15 +80,15 @@ const audience = [
 
 const faqs = [
   {
-    q: "Who can apply?",
-    a: "Anyone with a startup idea or an early-stage startup. You don't need funding, a registered company or a team to apply.",
+    q: "Who can register?",
+    a: "Anyone with a startup idea or an early-stage startup. You don't need funding, a registered company or a team to register.",
   },
   {
     q: `Why is there a ${EVENT.fee} application fee?`,
     a: "The fee keeps applications serious and covers the cost of reviewing every idea properly. It is paid securely through Razorpay (UPI, cards, net banking).",
   },
   {
-    q: "What happens after I apply?",
+    q: "What happens after I register?",
     a: "You get an Application ID immediately. Shortlisted applicants are contacted by email for Round 2, where you share more details about your startup.",
   },
   {
@@ -192,7 +193,7 @@ export default function DemoDayPage() {
           </h2>
           <p className="mt-6 text-lg leading-8 text-black/65">
             Most early founders never get in front of the right people. Not because their ideas are bad, but
-            because they don&apos;t have the network. {EVENT.name} fixes that.
+            because they don&apos;t have the network. {SKH.short} fixes that.
           </p>
           <p className="mt-4 text-lg leading-8 text-black/65">
             {EVENT.name} gives you a structured path from application to stage, with real feedback at
@@ -236,7 +237,7 @@ export default function DemoDayPage() {
       {/* Benefits */}
       <section id="benefits" className="mx-auto max-w-6xl px-5 py-24">
         <div className="max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-600">Why apply</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-600">Why register</p>
           <h2 className={`${serif.className} mt-4 text-4xl leading-tight sm:text-5xl`}>
             What you get from {EVENT.name}
           </h2>
@@ -259,15 +260,15 @@ export default function DemoDayPage() {
         ))}
       </section>
 
-      {/* Who should apply */}
+      {/* Who should register */}
       <section className="mx-auto grid max-w-6xl gap-12 px-5 py-24 md:grid-cols-2">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-600">Who should apply</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-600">Who should register</p>
           <h2 className={`${serif.className} mt-4 text-4xl leading-tight sm:text-5xl`}>
             If you&apos;re building something, this is for you.
           </h2>
           <p className="mt-6 text-lg leading-8 text-black/65">
-            You don&apos;t need a pitch deck, a company or a co-founder to apply. You need an idea and the drive
+            You don&apos;t need a pitch deck, a company or a co-founder to register. You need an idea and the drive
             to take it further.
           </p>
         </div>

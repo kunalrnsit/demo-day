@@ -23,7 +23,7 @@ export default function PrivacyPage() {
           details are entered directly with Razorpay and are never seen or stored by us.
         </li>
         <li>
-          <strong>Contact form:</strong> your name, email, phone number (optional), the reason you are writing, and
+          <strong>Contact form:</strong> your name, email, phone number, the reason you are writing, and
           your message.
         </li>
         <li>
