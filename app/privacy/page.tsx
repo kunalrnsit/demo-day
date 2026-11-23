@@ -89,6 +89,8 @@ export default function PrivacyPage() {
         {SITE.address}
         <br />
         Email: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+        <br />
+        Phone: <a href={`tel:${SITE.phone.replace(/\s/g, "")}`}>{SITE.phone}</a>
       </p>
     </LegalPage>
   );

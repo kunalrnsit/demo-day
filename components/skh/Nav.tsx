@@ -4,7 +4,6 @@ const LINKS = [
   { key: "home", label: "Home", href: "/" },
   { key: "sessions", label: "SKH Sessions", href: "/sessions" },
   { key: "demo-day", label: "Demo Day", href: "/demo-day" },
-  { key: "collab", label: "Collab", href: "/collab" },
   { key: "community", label: "Community", href: "/community" },
   { key: "portfolio", label: "Portfolio", href: "/portfolio" },
   { key: "contact", label: "Contact", href: "/#contact" },

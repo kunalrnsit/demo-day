@@ -69,7 +69,7 @@ export default function TermsPage() {
       <h2>9. Governing law</h2>
       <p>
         These terms are governed by the laws of India. Any disputes are subject to the jurisdiction of the
-        courts in Bengaluru, Karnataka.
+        courts in Hyderabad, Telangana.
       </p>
 
       <h2>10. Contact</h2>
