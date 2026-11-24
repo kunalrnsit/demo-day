@@ -3,6 +3,7 @@ import { SKH } from "@/lib/skh";
 const LINKS = [
   { key: "home", label: "Home", href: "/" },
   { key: "sessions", label: "SKH Sessions", href: "/sessions" },
+  { key: "events", label: "Upcoming Events", href: "/events" },
   { key: "demo-day", label: "Demo Day", href: "/demo-day" },
   { key: "community", label: "Community", href: "/community" },
   { key: "portfolio", label: "Portfolio", href: "/portfolio" },

@@ -1,4 +1,5 @@
 import Nav from "@/components/skh/Nav";
+import EventBanner from "@/components/skh/EventBanner";
 import Footer, { SampleNotice } from "@/components/skh/Footer";
 import Contact from "@/components/skh/Contact";
 import PortfolioCard from "@/components/skh/PortfolioCard";
@@ -31,13 +32,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#faf8f3] text-[#1b1b1b] antialiased">
       <SampleNotice />
-      <div className="bg-[#1b1b1b] px-4 py-2.5 text-center text-sm text-white/90">
-        <span className="mr-2 inline-block h-2 w-2 rounded-full bg-orange-500 align-middle" />
-        Demo Day 2027 registrations are open.{" "}
-        <a href="/demo-day" className="font-semibold text-orange-400 underline-offset-4 hover:underline">
-          Learn more →
-        </a>
-      </div>
+      <EventBanner />
       <Nav active="home" />
 
       {/* Hero */}

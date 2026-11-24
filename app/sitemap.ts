@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/collab", priority: 0.7, changeFrequency: "weekly" },
     { path: "/portfolio", priority: 0.8, changeFrequency: "weekly" },
     { path: "/sessions", priority: 0.8, changeFrequency: "weekly" },
+    { path: "/events", priority: 0.8, changeFrequency: "weekly" },
     { path: "/community", priority: 0.7, changeFrequency: "monthly" },
     { path: "/register", priority: 0.7, changeFrequency: "monthly" },
     { path: "/contact", priority: 0.4, changeFrequency: "yearly" },

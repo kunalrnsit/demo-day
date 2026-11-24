@@ -24,3 +24,19 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Moving "upcoming events" banner on the homepage */
+@keyframes skh-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.skh-marquee-track {
+  animation: skh-marquee 35s linear infinite;
+}
+.skh-marquee:hover .skh-marquee-track,
+.skh-marquee:focus-within .skh-marquee-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .skh-marquee-track { animation: none; }
+}

@@ -16,6 +16,7 @@ export default function Footer() {
       title: "Programs",
       links: [
         ["SKH Sessions", "/sessions"],
+        ["Upcoming Events", "/events"],
         ["Demo Day", "/demo-day"],
         ["Collab", "/collab"],
         ["Community", "/community"],
